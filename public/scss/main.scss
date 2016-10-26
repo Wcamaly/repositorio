@@ -1,0 +1,268 @@
+/*
+*
+*	Preprocesador Sass Main 
+*  	Mercado Libre Test 
+*
+*/
+
+/*------------------------------------/
+	Initializador Varibles
+/-----------------------------------*/
+
+$font-family  : Arial, Helvetica, Verdana, sans-serif;
+$color-default : #666;
+$margin-default: 10px auto;
+$color-primary : #333;
+$color-secundary : #900;
+$borders :  1px solid #ddd;
+$font-size: 15px;
+
+
+
+
+/*------------------------------------/
+	Css main
+/-----------------------------------*/
+
+*{
+	padding: 0;
+	margin: 0;
+}
+
+html, body{
+	font-family :$font-family ;
+	color : $color-default;
+	background-color :#eee;
+	font-size:$font-size;
+}
+section,header{
+	margin: $margin-default;
+	text-align: center;
+}
+header.product-section-header{
+	    padding: 15px 0;
+}
+header .product-title-main{
+	font-size : 2.3em;
+	color : $color-primary;
+}
+section.wrap{
+	 hr{
+	   	border-bottom: 1px solid #ccc;
+	    width: 80%;
+	    text-align: center;
+	    margin: auto;
+	   }
+}
+
+/*--- Gallery Product ---*/
+.gallery-container{
+	display:inline-block;
+	box-sizing: content-box;
+	.ch-carousel-mask{
+		margin: 0px;
+	}
+	.product-carrousel{
+		//min-height:499px;
+	}
+	.carrousel-container {
+	    position: relative;
+	    width: 397px;
+	    background-color: #fff;
+	    border: $borders;
+	    height: inherit;
+	    padding: 1em 0;
+	}
+	.ch-user-no-select{
+	    opacity: .5;
+	    z-index: 1;
+	    background: #fff;
+	    cursor: pointer;
+	    overflow: hidden;
+	}
+	.ch-user-no-select:hover{
+		opacity: .8;
+	}
+}
+/*--- Generales ---*/
+.cost{
+   	color: $color-secundary;   	
+   	line-height: normal;
+   	sup{
+   		font-size: .5em;
+	    line-height: 1.5em;
+	    vertical-align: top;
+   	}
+}
+[role="button"]:active,
+[role="button"]:focus{
+	outline: -webkit-focus-ring-color auto 5px;
+}
+.clear{
+	clear:both;
+}
+/*--- Form tu buy --- */
+ .form-container {
+    display: inline-block;
+    padding-left: 50px;
+    vertical-align: top;
+    text-align: left;
+    max-width: 480px;
+    min-width: 390px;
+    margin-left: -4px;
+
+
+    .product-cost{
+     	font-size: 2.8em;
+    	
+    }
+    .ch-form-row label{
+    	text-align: left;
+    	width: auto;
+    }
+
+	.form-quantity-container article, .form-payments-container article {
+	    margin-left: 50px;
+	    margin-top: 20px;
+	    padding-left: 15px;
+	    padding-right: 22px;
+	    padding-top: 0;
+	    border-left: 1px solid #e3e3e3;
+	    position: relative;
+	}
+
+	.ch-form-row i{
+		transform: translate(-68px, -7px);
+		position:absolute;
+	}
+
+	.form-button-container{
+		margin-top: 25px;
+	}
+	.form-disclaimer span{
+		font-size: .7em;
+	}
+
+}
+
+/*--- sugestion ---*/
+.suggestions-container{
+	margin-top: 20px;
+	.title-suggestion{
+		margin: 0px;
+		font-size: 13px;
+		a{
+			width: 120px;
+		    display: block;
+		    overflow: hidden;
+		    white-space: nowrap;
+		    text-overflow: ellipsis;
+		}
+	}
+	.cost-suggestion{
+		font-size: 16px;
+		margin:0;
+	}
+	.ch-user-no-select{
+		overflow: hidden;
+	}
+
+}
+
+
+/*--- Comments ---*/
+.secction-comment{
+	width:80%;
+	margin-top:25px;
+    text-align: left;
+	.tabs-container {
+		margin: 0px;
+		.ch-tabs-triggers{
+			z-index: 7;
+			li {
+		    	float: left;
+			}
+		}
+
+	}
+	.ch-tab{
+		margin-bottom: -1px;
+	    z-index: 100;
+	    position: relative;
+	}
+	input[type="radio"]:checked + label{
+		   background-color: #f0f0f0;
+	       background-image: linear-gradient(#f0f0f0, #fff);
+	       border-bottom: 1px solid #fff;
+	       cursor: default;
+	        font-weight: bold;
+	        box-shadow: 2px 0 2px rgba(255, 255, 255, 0.5);
+		}
+	label[role="button"]:active,
+	label[role="button"]:focus{
+		background-color: #f0f0f0;
+	}
+	
+
+	input[type="radio"]{
+			position:absolute;
+			visibility: hidden;
+		}
+
+	input#descriptionComment:checked ~ .tabs-content-container .tabs-content#descriptionContent#descriptionContent,
+	input#questionComment:checked ~ .tabs-content-container .tabs-content#questContent {
+			opacity: 1;
+			z-index: 100;
+			display: block;
+		}
+
+	.tabs-content-container{
+		position: relative;
+		min-height: 11em;
+		padding:0px;
+    	overflow: auto;
+    	z-index: 5;
+		.tabs-content{
+			opacity: 0;
+		    padding: 1.5em;
+		    position: absolute;
+		    z-index: -100;
+   			transition: all linear 0.1s;
+   			width: calc(100% - 3em);
+   			display: none;
+   			p{
+   				clear: both;
+   			}
+		}
+		.description,.quest-container{
+			text-align: left;
+			font-size: 13px;
+		}
+
+
+		.quest-container{
+			padding:0.5 0;
+			border-bottom: $borders;
+			p,h5{
+				margin: 0
+			}
+			.quest-name{
+				color:$color-secundary;
+				font-size: 1.2em;
+			}
+			.quest{
+				padding-left: 1em;
+			}
+			.quest-response{
+				padding-left:2em;
+				color: #000;
+			}
+		}
+	
+	}
+
+	
+			
+
+	
+}

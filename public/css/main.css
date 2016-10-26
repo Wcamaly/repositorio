@@ -1,0 +1,248 @@
+/*
+*
+*	Preprocesador Sass Main 
+*  	Mercado Libre Test 
+*
+*/
+/*------------------------------------/
+	Initializador Varibles
+/-----------------------------------*/
+/*------------------------------------/
+	Css main
+/-----------------------------------*/
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  font-family: Arial, Helvetica, Verdana, sans-serif;
+  color: #666;
+  background-color: #eee;
+  font-size: 15px;
+}
+
+section, header {
+  margin: 10px auto;
+  text-align: center;
+}
+
+header.product-section-header {
+  padding: 15px 0;
+}
+
+header .product-title-main {
+  font-size: 2.3em;
+  color: #333;
+}
+
+section.wrap hr {
+  border-bottom: 1px solid #ccc;
+  width: 80%;
+  text-align: center;
+  margin: auto;
+}
+
+/*--- Gallery Product ---*/
+.gallery-container {
+  display: inline-block;
+  -moz-box-sizing: content-box;
+       box-sizing: content-box;
+}
+.gallery-container .ch-carousel-mask {
+  margin: 0px;
+}
+.gallery-container .carrousel-container {
+  position: relative;
+  width: 397px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  height: inherit;
+  padding: 1em 0;
+}
+.gallery-container .ch-user-no-select {
+  opacity: .5;
+  z-index: 1;
+  background: #fff;
+  cursor: pointer;
+  overflow: hidden;
+}
+.gallery-container .ch-user-no-select:hover {
+  opacity: .8;
+}
+
+/*--- Generales ---*/
+.cost {
+  color: #900;
+  line-height: normal;
+}
+.cost sup {
+  font-size: .5em;
+  line-height: 1.5em;
+  vertical-align: top;
+}
+
+[role="button"]:active,
+[role="button"]:focus {
+  outline: -webkit-focus-ring-color auto 5px;
+}
+
+.clear {
+  clear: both;
+}
+
+/*--- Form tu buy --- */
+.form-container {
+  display: inline-block;
+  padding-left: 50px;
+  vertical-align: top;
+  text-align: left;
+  max-width: 480px;
+  min-width: 390px;
+  margin-left: -4px;
+}
+.form-container .product-cost {
+  font-size: 2.8em;
+}
+.form-container .ch-form-row label {
+  text-align: left;
+  width: auto;
+}
+.form-container .form-quantity-container article, .form-container .form-payments-container article {
+  margin-left: 50px;
+  margin-top: 20px;
+  padding-left: 15px;
+  padding-right: 22px;
+  padding-top: 0;
+  border-left: 1px solid #e3e3e3;
+  position: relative;
+}
+.form-container .ch-form-row i {
+  -webkit-transform: translate(-68px, -7px);
+     -moz-transform: translate(-68px, -7px);
+      -ms-transform: translate(-68px, -7px);
+       -o-transform: translate(-68px, -7px);
+          transform: translate(-68px, -7px);
+  position: absolute;
+}
+.form-container .form-button-container {
+  margin-top: 25px;
+}
+.form-container .form-disclaimer span {
+  font-size: .7em;
+}
+
+/*--- sugestion ---*/
+.suggestions-container {
+  margin-top: 20px;
+}
+.suggestions-container .title-suggestion {
+  margin: 0px;
+  font-size: 13px;
+}
+.suggestions-container .title-suggestion a {
+  width: 120px;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.suggestions-container .cost-suggestion {
+  font-size: 16px;
+  margin: 0;
+}
+.suggestions-container .ch-user-no-select {
+  overflow: hidden;
+}
+
+/*--- Comments ---*/
+.secction-comment {
+  width: 80%;
+  margin-top: 25px;
+  text-align: left;
+}
+.secction-comment .tabs-container {
+  margin: 0px;
+}
+.secction-comment .tabs-container .ch-tabs-triggers {
+  z-index: 7;
+}
+.secction-comment .tabs-container .ch-tabs-triggers li {
+  float: left;
+}
+.secction-comment .ch-tab {
+  margin-bottom: -1px;
+  z-index: 100;
+  position: relative;
+}
+.secction-comment input[type="radio"]:checked + label {
+  background-color: #f0f0f0;
+  background-image: -webkit-linear-gradient(#f0f0f0, #fff);
+  background-image: -moz-linear-gradient(#f0f0f0, #fff);
+  background-image: -o-linear-gradient(#f0f0f0, #fff);
+  background-image: linear-gradient(#f0f0f0, #fff);
+  border-bottom: 1px solid #fff;
+  cursor: default;
+  font-weight: bold;
+  box-shadow: 2px 0 2px rgba(255, 255, 255, 0.5);
+}
+.secction-comment label[role="button"]:active,
+.secction-comment label[role="button"]:focus {
+  background-color: #f0f0f0;
+}
+.secction-comment input[type="radio"] {
+  position: absolute;
+  visibility: hidden;
+}
+.secction-comment input#descriptionComment:checked ~ .tabs-content-container .tabs-content#descriptionContent#descriptionContent,
+.secction-comment input#questionComment:checked ~ .tabs-content-container .tabs-content#questContent {
+  opacity: 1;
+  z-index: 100;
+  display: block;
+}
+.secction-comment .tabs-content-container {
+  position: relative;
+  min-height: 11em;
+  padding: 0px;
+  overflow: auto;
+  z-index: 5;
+}
+.secction-comment .tabs-content-container .tabs-content {
+  opacity: 0;
+  padding: 1.5em;
+  position: absolute;
+  z-index: -100;
+  -webkit-transition: all linear 0.1s;
+     -moz-transition: all linear 0.1s;
+       -o-transition: all linear 0.1s;
+          transition: all linear 0.1s;
+  width: -webkit-calc(100% - 3em);
+  width: -moz-calc(100% - 3em);
+  width: calc(100% - 3em);
+  display: none;
+}
+.secction-comment .tabs-content-container .tabs-content p {
+  clear: both;
+}
+.secction-comment .tabs-content-container .description, .secction-comment .tabs-content-container .quest-container {
+  text-align: left;
+  font-size: 13px;
+}
+.secction-comment .tabs-content-container .quest-container {
+  padding: 0.5 0;
+  border-bottom: 1px solid #ddd;
+}
+.secction-comment .tabs-content-container .quest-container p, .secction-comment .tabs-content-container .quest-container h5 {
+  margin: 0;
+}
+.secction-comment .tabs-content-container .quest-container .quest-name {
+  color: #900;
+  font-size: 1.2em;
+}
+.secction-comment .tabs-content-container .quest-container .quest {
+  padding-left: 1em;
+}
+.secction-comment .tabs-content-container .quest-container .quest-response {
+  padding-left: 2em;
+  color: #000;
+}
