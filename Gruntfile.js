@@ -61,20 +61,20 @@ module.exports = function (grunt) {
       
     },
     cssmin: {
+      options: {
+        shorthandCompacting: false,
+        roundingPrecision: -1
+      },
       target: {
-        files: [{
-          expand: true,
-          cwd: 'public/css',
-          src: ['*.css', '!*.min.css'],
-          dest: 'min/',
-          ext: '.min.css'
-        }]
+        files: {
+          'min/main.min.css': ['node_modules/chico/dist/ui/chico.min.css', 'public/css/main.css']
+        }
       }
     },
     uglify: {
       my_target: {
         files: {
-          'min/script.min.js': ['public/js/app.js']
+          'min/script.min.js': ['public/js/app.js','node_modules/chico/dist/ui/chico.min.js','node_modules/jQuery/tmp/jquery.js']
         }
       }
     }
