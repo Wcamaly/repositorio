@@ -55,7 +55,7 @@ module.exports = function (grunt) {
           collapseWhitespace: true
         },
         files: {  
-          'min/index.html': 'public/*.html',
+          'index.html': 'public/*.html',
            }
       }
       
@@ -67,14 +67,14 @@ module.exports = function (grunt) {
       },
       target: {
         files: {
-          'min/main.min.css': ['node_modules/chico/dist/ui/chico.min.css', 'public/css/main.css']
+          'main.min.css': ['node_modules/chico/dist/ui/chico.min.css', 'public/css/main.css']
         }
       }
     },
     uglify: {
       my_target: {
         files: {
-          'min/script.min.js': ['public/js/app.js','node_modules/chico/dist/ui/chico.min.js','node_modules/jQuery/tmp/jquery.js']
+          'script.min.js': ['public/js/app.js','node_modules/chico/dist/ui/chico.min.js','node_modules/jQuery/tmp/jquery.js']
         }
       }
     }
