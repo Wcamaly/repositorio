@@ -67,14 +67,14 @@ module.exports = function (grunt) {
       },
       target: {
         files: {
-          'main.min.css': ['node_modules/chico/dist/ui/chico.min.css', 'public/css/main.css']
+          'css/main.min.css': ['public/css/main.css']
         }
       }
     },
     uglify: {
       my_target: {
         files: {
-          'script.min.js': ['public/js/app.js','node_modules/chico/dist/ui/chico.min.js','node_modules/jQuery/tmp/jquery.js']
+          'js/script.min.js': ['public/js/app.js']
         }
       }
     }
